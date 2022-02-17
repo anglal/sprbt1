@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+
+<h1>Corona Virus Status</h1>
+
+<table>
+    <tr>
+        <th>Location</th>
+        <th>Confirmed Cases</th>
+    </tr>
+    <tr th:each="datum : ${data}">
+        <td th:text="${datum.location}"></td>
+        <td th:text="${datum.confirmedCases}"></td>
+    </tr>
+</table>
+</body>
+
+</html>
